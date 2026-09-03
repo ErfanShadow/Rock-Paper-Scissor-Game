@@ -16,14 +16,20 @@ def sleep(x):
 
 clear()
 print("=-=-=-=-=-=", Fore.GREEN,
-      "WELCOME TO ROCK PAPER SCISSOR GAME", Fore.RESET, "=-=-=-=-=-=")
+    "WELCOME TO ROCK PAPER SCISSOR GAME", Fore.RESET, "=-=-=-=-=-=")
 sleep(2)
 clear()
 while True:
     print(Fore.RED, "[+]", "CHOOSE:\n", Fore.YELLOW,
-          "1] Rock \n 2] Paper \n 3] Scissor", Fore.CYAN)
+        "1] Rock \n 2] Paper \n 3] Scissor", Fore.CYAN)
     a = int(input("[+]>>>"))
     b = random.randint(1, 3)
+    if b == 1:
+        print(Fore.GREEN,'Rock')
+    elif b == 2:
+            print(Fore.GREEN,'Paper')
+    elif b == 3:
+            print(Fore.GREEN,'Scissor')
     if a == 1 and b == 2 or a == 2 and b == 3 or a == 3 and b == 1:
         print(Fore.RED, "YOU LOSE!")
     if a == 2 and b == 1 or a == 3 and b == 2 or a == 1 and b == 3:
